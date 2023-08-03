@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+body{
+  background-color: transparent;
+}
+html{
+  background-color: transparent;
+}
+*{
+  background-color: transparent;
+}
 .theme-button{
   display: inline-block;
   border-radius: 50%; 
@@ -8,9 +17,17 @@
   border: .5px solid rgb(227, 227, 227);
 
 }
+#root{
+  background-color: transparent;
+}
+.main-section{
+  background-color: #83131300;
+  padding: 20px;
+  margin: 30px;
+}
 .activeTheme {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
 }
 .logo-text{
   font-family:Poppins;
@@ -38,10 +55,7 @@ header{
   justify-content: center; /* Centers the Navbar horizontally */
   align-items: center; 
 }
-.light{
-  background-color: rgb(255, 255, 255);
 
-}
 .medium{
   background-color: rgb(91, 91, 91);
 
@@ -49,6 +63,9 @@ header{
 .dark{
   background-color: rgb(0, 0, 0);
 
+}
+.gThree{
+  background-color: #03fffb;
 }
 .gOne{
   background-color: rgb(228, 26, 26);
@@ -104,9 +121,6 @@ header{
   padding: 10px 0 20px;
   display: flex;
   justify-content: space-between;
-
-
-
 }
 
 .text{
@@ -158,4 +172,33 @@ li{
 .task-card-name{
   font-size: 18px;
   padding-bottom: 5px;
+}
+
+
+.light{
+  background-color: #FFFFFF;
+  transition: all 500ms;  
+}
+
+.medium{
+  background-color: #EFEFEF;
+  transition: all 500ms;
+}
+
+.dark{
+  background-color: #15202B;
+  transition: all 500ms;
+}
+
+.gradientOne{
+  background: linear-gradient(90deg, hsla(191, 75%, 60%, 1) 0%, hsla(248, 87%, 36%, 1) 100%);
+}
+.gradientTwo{
+  background: linear-gradient(235deg, #FFFFFF 0%, #000F25 100%), linear-gradient(180deg, #6100FF 0%, #000000 100%), linear-gradient(235deg, #FFA3AC 0%, #FFA3AC 40%, #00043C calc(40% + 1px), #00043C 60%, #005D6C calc(60% + 1px), #005D6C 70%, #00C9B1 calc(70% + 1px), #00C9B1 100%), linear-gradient(125deg, #FFA3AC 0%, #FFA3AC 40%, #00043C calc(40% + 1px), #00043C 60%, #005D6C calc(60% + 1px), #005D6C 70%, #00C9B1 calc(70% + 1px), #00C9B1 100%);
+  background-blend-mode: soft-light, screen, darken, normal;
+}
+
+.gradientThree{
+  background: linear-gradient(125deg, #FFFFFF 0%, #000000 100%), linear-gradient(200deg, #FFD9E8 0%, #FFD9E8 50%, #DE95BA calc(50% + 1px), #DE95BA 60%, #7F4A88 calc(60% + 1px), #7F4A88 75%, #4A266A calc(75% + 1px), #4A266A 100%), linear-gradient(113deg, #FFD9E8 0%, #FFD9E8 40%, #DE95BA calc(40% + 1px), #DE95BA 50%, #7F4A88 calc(50% + 1px), #7F4A88 70%, #4A266A calc(70% + 1px), #4A266A 100%);
+  background-blend-mode: overlay, overlay, normal;
 }

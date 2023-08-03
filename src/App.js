@@ -8,15 +8,25 @@ import { ShowTask } from './components/ShowTask';
 
 
 function App() {
+  const [theme,setTheme] = useState(JSON.parse(localStorage.getItem("theme") ) || 'light')
   const [tasks,setTasks]=useState(JSON.parse(localStorage.getItem("tasks"))||[])
   const [editTask , setEditTask]  = useState({})
   useEffect(()=>{
     localStorage.setItem("tasks",JSON.stringify(tasks))
   },[tasks])
 
+  useEffect(()=>{
+    localStorage.setItem("theme",JSON.stringify(theme))
+    document.documentElement.removeAttribute("class")
+    document.documentElement.classList.add(theme)
+  },[theme])
+
   return (
-    <section className="p-3">
-     <NavigationBar />
+    <section className="p-3  main-section">
+     <NavigationBar 
+      theme={theme}
+      setTheme = {setTheme}
+     />
      <AddTask 
       tasks={tasks} 
       setTasks={setTasks}
