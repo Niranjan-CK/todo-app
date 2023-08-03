@@ -1,22 +1,36 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useEffect, useState } from 'react';
+import { NavigationBar } from './components/NavigationBar';
+import { AddTask } from './components/AddTask';
+import { ShowTask } from './components/ShowTask';
+
+
 
 function App() {
+  const [tasks,setTasks]=useState(JSON.parse(localStorage.getItem("tasks"))||[])
+  const [editTask , setEditTask]  = useState({})
+  useEffect(()=>{
+    localStorage.setItem("tasks",JSON.stringify(tasks))
+  },[tasks])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="p-3">
+     <NavigationBar />
+     <AddTask 
+      tasks={tasks} 
+      setTasks={setTasks}
+      editTask = {editTask}
+      setEditTask = {setEditTask}
+    
+
+      />
+     <ShowTask 
+      tasks={tasks} 
+      setTasks={setTasks} 
+      setEditTask = {setEditTask}
+      />
+    </section>
   );
 }
 

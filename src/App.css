@@ -1,38 +1,161 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+.theme-button{
+  display: inline-block;
+  border-radius: 50%; 
+  padding: 10px;
+  margin: 2px;
+  border: .5px solid rgb(227, 227, 227);
+
+}
+.activeTheme {
+  height: 30px;
+  width: 30px;
+}
+.logo-text{
+  font-family:Poppins;
+  color: #525252;
+  cursor: pointer;
+  font-size: 22px;
+  margin-left: 7px;
+}
+.nav-header{
+  background-color: rgb(255, 255, 255);
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius:10px;
+  box-shadow: 0 6px 24px 0 rgba(0,0,0,.05), 0 0 0 1px rgba(0,0,0,.08);
+
+}
+.logo-img{
+  width:30px
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header{
+  display: flex;
+  justify-content: center; /* Centers the Navbar horizontally */
+  align-items: center; 
+}
+.light{
+  background-color: rgb(255, 255, 255);
+
+}
+.medium{
+  background-color: rgb(91, 91, 91);
+
+}
+.dark{
+  background-color: rgb(0, 0, 0);
+
+}
+.gOne{
+  background-color: rgb(228, 26, 26);
+
+}
+.gTwo{
+  background-color: rgb(12, 75, 175);
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* search box */
+.search-box-body{
+  display: flex;
+  justify-content: center; /* Centers the <div> horizontally */
+  align-items: center;
+  margin-top: 30px;
+}
+.search-box{
+  border-radius: 5px;
+  padding: 20px;
+  width: 40%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 6px 24px 0 rgba(0,0,0,.05), 0 0 0 1px rgba(0,0,0,.08);
+
+}
+.form-group{
+  display: flex;
+}
+.add-btn{
+  margin-left: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+/* show task */
+
+.task-main-box{
+  display: flex;
+  justify-content: center; /* Centers the <div> horizontally */
+  align-items: center;
+  margin-top: 40px;
+}
+.task-box{
+  width: 90%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 6px 24px 0 rgba(0,0,0,.05), 0 0 0 1px rgba(0,0,0,.08);
+}
+.task-head{
+  margin-top: 10px;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid #dfdfdf;;
+  padding: 10px 0 20px;
+  display: flex;
+  justify-content: space-between;
+
+
+
+}
+
+.text{
+  font-size: 18px;
+  font-weight: 600;
+}
+.count{
+  background-color: #dfdfdf;
+  border-radius: 50%;
+  color: #525252;
+  margin-left: 10px;
+  padding: 5px 8px;
+}
+
+/* task-list */
+
+
+.task-list-main{
+  margin: 20px;
+}
+ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-around;
+  margin: 30px 5px 20px;
+}
+li{
+  border-bottom: 1px solid #e5e5e5;
+    border-left: 5px solid #1365dfaf;
+    border-radius: 5px;
+    box-shadow: 0 6px 24px 0 rgba(0,0,0,.05), 0 0 0 1px rgba(0,0,0,.08);
+    /* box-shadow: var(--box-shadow); */
+    display: flex;
+    gap: 5px;
+    padding: 15px 10px;
+    width: 350px;
+}
+.task-card{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-grow: 1;
 }
-
-.App-link {
-  color: #61dafb;
+.task-card-time{
+  color: #737373;
+  font-size: 12px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task-card-name{
+  font-size: 18px;
+  padding-bottom: 5px;
 }
